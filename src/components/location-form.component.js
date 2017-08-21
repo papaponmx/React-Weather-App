@@ -4,7 +4,7 @@ export default class LocationFormComponent extends Component {
 	render() {
 		return (
 			<div>
-				
+				Location Form
 			</div>
 		);
 	}
