@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'; 
 
 import AppComponent from './components/app.component';
+import store from './store';
 
-ReactDOM.render(<AppComponent />, document.getElementById('app'));
+ReactDOM.render(<Provider store={store} > 
+	<AppComponent /> 
+	</Provider>, document.getElementById('app'));
