@@ -21,7 +21,7 @@ export default class AppComponent extends Component {
 		return (
 			<div>
 				<h1>WeatherCheck</h1>
-				<WeatherComponent />
+				<WeatherComponent weather={weather} />
 				<LocationFormComponent /> 
 			</div>
 		);
