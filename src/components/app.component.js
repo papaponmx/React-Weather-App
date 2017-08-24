@@ -18,12 +18,17 @@ export default class AppComponent extends Component {
 
 	render() {
 		const {weather} = this.props;
+		
 		return (
 			<div>
 				<h1>WeatherCheck</h1>
 				<WeatherComponent weather={weather} />
-				<LocationFormComponent /> 
+				<LocationFormComponent onLocationChange={this.onLocationChange.bind(this)} /> 
 			</div>
 		);
+	}
+
+	onLocationChange(location) {
+		this.props.dispatch(fetchWeather({ city: location.city, state: location.state }));
 	}
 }
