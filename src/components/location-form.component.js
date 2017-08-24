@@ -6,11 +6,15 @@ export default class LocationFormComponent extends Component {
 			<div>
 				<h3>Change Location</h3>
 				<form onSubmit={this.changeLocation.bind(this)}>
-					<input type="text" ref="city" placeholder="Enter City" />
+					<div className="form-group">
+						<input className="form-control" type="text" ref="city" placeholder="Enter City" />
+					</div>
 					<br/>
-					<input type="text" ref="state" placeholder="Enter State" />
+					<div className="form-group">
+						<input className="form-control" type="text" ref="state" placeholder="Enter State" />
+					</div>
 					<br/>
-					<input type="submit" value="Submit" />
+					<input className="btn-primary btn btn-block2" type="submit" value="Submit" />
 				</form>
 			</div>
 		);
